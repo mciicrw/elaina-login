@@ -1,0 +1,6 @@
+[theme]
+name=elaina-login
+description=SLiM-like LightDM webkit theme for Elaina Openbox Theme
+engine=lightdm-webkit-greeter
+url=index.html
+session=openbox
