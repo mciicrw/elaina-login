@@ -52,13 +52,13 @@ if you want to test after developing this theme you can use these method below
 soon
 
 ## TODO
-- [] add screenshot preview
-- [] fix login-card size in smaller screen
-- [] fix footer size & placement
-- [] customize select menu
-- [] add background image in login-card so doesn't look plain & boring
-- [] fix color scheme
+- [ ] add screenshot preview
+- [ ] fix login-card size in smaller screen
+- [ ] fix footer size & placement
+- [ ] customize select menu
+- [ ] add background image in login-card so doesn't look plain & boring
+- [ ] fix color scheme
 - [x] blur background if applicable
-- [] edit README.md further so new linux user can understand easily
+- [ ] edit README.md further so new linux user can understand easily
 
 Future Plan: Make easily customizable lightdm webkit theme based on this theme
