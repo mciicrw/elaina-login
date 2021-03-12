@@ -2,16 +2,34 @@
     box-sizing: border-box;
 }
 
-body {
+
+
+body, html {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../images/elaina-darken.png");
-    background-size: cover;
-    color: #373e4d;
     overflow: hidden;
+    height: 100%;
+    margin: 0;
 }
 
 img {
     border-radius: 10px;
+}
+
+.container {
+    position: absolute;
+    top:0;
+}
+
+.blur-bg {
+    background-image: url("../images/elaina-darken.png");
+    filter:blur(8px);
+    -webkit-filter: blur(8px);
+    
+    background-size: cover;
+    color: #373e4d;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .flex-container-row {
