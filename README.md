@@ -1,16 +1,38 @@
 # Elaina Login
-LightDM Webkit Theme based on Elaina Openbox Theme
+LightDM Webkit Theme based on Elaina Openbox Theme, this theme is supposed to use with Elaina Openbox Theme so this will not have any customisation whatsoever and keep this theme simple.
+Any feature request PR or Issues will be closed immediately.
 
-## Dependencies
+
+## Installing Theme
+**Dependencies**
 - LightDM
 - LightDM-webkit2-greeter
 
-## How to Install
+**How to Install**
 1. Make sure lightdm using webkit greeter ([activate webkit greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter))
 2. Clone this repository
 3. Copy cloned folder into `/usr/share/lightdm-webkit/themes`
 4. Edit `webkit_theme` in `[greeter]` section inside `/etc/lightdm/lightdm-webkit2-greeter.conf` into `elaina-login`
 5. Save and enjoy!
+
+## Development
+This project is still in heavy development, you can contribute too! just open an issue or PR, and i'll review it, as far as it isn't feature request.
+
+### Testing 
+Want to test this theme? you can have it [here](https://mciicrw.github.io/elaina-login)
+
+if you want to test after developing this theme you can use these method below
+
+**Browser Method**
+- Make sure you have browser installed, webkit browser such as Safari or GNOME Web (epiphany) is preferred
+- go to theme folder and open `index.html`
+- you're good to go!
+
+**LightDM Theme Debugger**
+- Install development theme with different name
+- Change `webkit_theme` into development theme name
+- Open terminal and run `lightdm-webkit2-greeter`
+- you're good to go!
 
 ## Screenshot
 soon
