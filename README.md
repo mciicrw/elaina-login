@@ -9,11 +9,18 @@ Any feature request PR or Issues will be closed immediately.
 - LightDM-webkit2-greeter
 
 ### How to Install
-1. Make sure lightdm using webkit greeter ([activate webkit greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter))
-2. Clone this repository
-3. Copy cloned folder into `/usr/share/lightdm-webkit/themes`
-4. Edit `webkit_theme` in `[greeter]` section inside `/etc/lightdm/lightdm-webkit2-greeter.conf` into `elaina-login`
-5. Save and enjoy!
+1. Install the dependecies if you haven't installed
+2. Make sure lightdm using webkit greeter ([activate webkit greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter))
+3. Clone this repository `git clone https://github.com/mciicrw/elaina-login.git`
+4. Copy cloned folder into `/usr/share/lightdm-webkit/themes`
+5. Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` file like shown below
+```conf
+.....
+[greeter]
+webkit_theme = elaina-login
+.....
+```
+6. Save and enjoy!
 
 ## Development
 This project is still in heavy development, you can contribute too! just open an issue or PR, and i'll review it, as far as it isn't feature request.
@@ -41,6 +48,11 @@ if you want to test after developing this theme you can use these method below
 - Make sure you have browser installed, webkit browser such as Safari or GNOME Web (epiphany) is preferred
 - go to theme folder and open `index.html`
 - you're good to go!
+
+also uncomment line below in `index.html` if you want to test user select and session select
+```html
+<!--<script src="js/lightdm-sample.js"></script> -->
+```
 
 **LightDM Theme Debugger**
 - Install development theme with different name
