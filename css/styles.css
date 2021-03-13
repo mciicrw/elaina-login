@@ -9,6 +9,7 @@ body, html {
     overflow: hidden;
     height: 100%;
     margin: 0;
+    background: #373e4d;
 }
 
 img {
@@ -18,6 +19,7 @@ img {
 .container {
     position: absolute;
     top:0;
+    width: 98%;
 }
 
 .blur-bg {
@@ -177,7 +179,67 @@ footer label {
 }
 
 footer .flex-container-row{
-    align-items: center;
+    align-items:flex-end;
     justify-content: flex-end;
-    flex-basis: 70%;
+    flex-basis: 82%;
+    margin: 0 4vh 2vw 0;
+}
+
+@media (max-height: 720px) and (min-height: 600px){
+
+    .login-container {
+        height:260px;
+    }
+
+    .input-form {
+        height: 50px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    footer .flex-container-column {
+        margin: 0 16px;
+    }
+
+    footer select {
+        margin: 10px 0 0 0;
+        height: 25px;
+    }
+
+
+}
+
+@media (min-width:800px) and (max-width:1267px) {
+
+    .login-container {
+        width: 570px;
+        margin: 0;
+    }
+
+    input, select {
+        width: 166px;
+    }
+
+    footer .flex-container-column {
+        width: 200px;
+    }
+
+    
+}
+
+
+@media (max-width: 799px){
+
+    .blur-bg, main, footer{
+        visibility: hidden;
+    }
+}
+
+@media (max-height: 599px){
+
+    .blur-bg, main, footer{
+        visibility: hidden;
+    }
 }

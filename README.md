@@ -4,11 +4,11 @@ Any feature request PR or Issues will be closed immediately.
 
 
 ## Installing Theme
-**Dependencies**
+### Dependencies
 - LightDM
 - LightDM-webkit2-greeter
 
-**How to Install**
+### How to Install
 1. Make sure lightdm using webkit greeter ([activate webkit greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter))
 2. Clone this repository
 3. Copy cloned folder into `/usr/share/lightdm-webkit/themes`
@@ -53,12 +53,13 @@ soon
 
 ## TODO
 - [ ] add screenshot preview
-- [ ] fix login-card size in smaller screen
-- [ ] fix footer size & placement
+- [x] fix login-card size in smaller screen
+- [x] fix footer size & placement
 - [ ] customize select menu
 - [ ] add background image in login-card so doesn't look plain & boring
 - [ ] fix color scheme
 - [x] blur background if applicable
+- [ ] fix select & login button font (webkit problem, gecko and blink render this beautifully)
 - [ ] edit README.md further so new linux user can understand easily
 
 Future Plan: Make easily customizable lightdm webkit theme based on this theme
