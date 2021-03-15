@@ -61,7 +61,7 @@ also uncomment line below in `index.html` if you want to test user select and se
 - you're good to go!
 
 ## Screenshot
-![login screenshot](https://github.com/mciicrw/img-resources/Screenshot/LightDM/elaina-login.png)
+![login screenshot](https://github.com/mciicrw/img-resources/Screenshot/LightDM/elaina-login.png?raw=true)
 
 ## TODO
 - [x] add screenshot preview
