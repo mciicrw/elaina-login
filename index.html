@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <!-- Sample lightdm object (for browser use only) -->
-    <!--<script src="js/lightdm-sample.js"></script> -->
+    <script src="js/lightdm-sample.js"></script>
     <body>
         <div class="blur-bg"></div>
         <main class="container flex-container-column">
@@ -20,13 +20,16 @@
                     <div class="flex-container-column">
                         <h2 id="welcome">Welcome Back, Shirin!</h2>
                         <div class="input-form" >
-                            <label>User</label>
-                            <select id="selectUser"></select>
+                            <label for="selectuser">User</label>
+                            <div class="custom-select">
+                                <select id="selectUser"></select>
+                            </div>
+                            <span class="focus"></span>
                         </div>
                         <div class="input-form">
                             <form action="javascript:handle_input();">
                                 <label for="inputPassword">Password</label>
-                                <input id="inputPassword" type="password" />
+                                <input class="custom-input" id="inputPassword" type="password" />
                             </form>
                         </div>
                         <div id="status-text"></div>
@@ -41,7 +44,10 @@
         <footer class="flex-container-row">
             <div class="flex-container-column">
                 <label>Select Session</label>
-                <select id="selectSession"></select>
+                <div class="custom-select">
+                    <select id="selectSession"></select>
+                </div>
+                <span class="focus"></span>
             </div>
             <div class="flex-container-row">
                 <div id="buttonRestart">

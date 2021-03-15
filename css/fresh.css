@@ -2,16 +2,44 @@
     box-sizing: border-box;
 }
 
-body {
+:root {
+    --select-border: #63c5ea;
+    --select-focus: blue;
+    --select-arrow: #777;
+    --input-border: var(--select-border);
+    --input-focus-h: 196;
+    --input-focus-s: 76%;
+    --input-focus-l: 46%;
+}
+
+body, html {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("../images/elaina-darken.png");
-    background-size: cover;
-    color: #373e4d;
     overflow: hidden;
+    height: 100%;
+    margin: 0;
+    background: #373e4d;
 }
 
 img {
     border-radius: 10px;
+}
+
+.container {
+    position: absolute;
+    top:0;
+    width: 98%;
+}
+
+.blur-bg {
+    background-image: url("../images/elaina-darken.png");
+    filter:blur(8px);
+    -webkit-filter: blur(8px);
+    
+    background-size: cover;
+    color: #373e4d;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .flex-container-row {
@@ -59,6 +87,10 @@ img {
     height: 1vh;
 }
 
+label {
+    font-size: 0.75rem;
+}
+/*
 input[type=password]{
     margin: 1em;
     box-sizing:border-box;
@@ -74,26 +106,67 @@ input[type=password]:focus{
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
+*/
+
+
+.custom-input {
+    font-family: inherit;
+    padding: 0.25em 0.25em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--input-border);
+    width: 100%;
+    outline: none;
+}
   
 select{
     appearance: none;
     -webkit-appearance: none;
     outline: none;
-    margin: 1em;
-    width: 15vw;
+    margin: 0;
+    padding: 0.5em 1em 0 0;
+    width: 100%;
     border: none;
-    border-bottom: 1px solid #63c5ea;
+    /* border-bottom: 1px solid #63c5ea; */
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
     background: none;
-    background-image: element();
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-position-x: 100%;
 }
-  
-select:focus{
-    border-bottom: 2px solid #63c5ea;
-    transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+
+.custom-select{
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border-bottom: 1px solid var(--select-border);    
+    cursor: pointer;
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+}
+
+.custom-select:after{
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+}
+
+select, .custom-select:after {
+    grid-area: select;
+}
+
+select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid var(--select-focus);
 }
   
   
@@ -108,14 +181,15 @@ svg *{
 }
   
 #loginButton{
+    font-family: inherit;
     background: none;
     border: none;
     outline: none;
     padding: 0.5em 1em;
     margin-top: 1em;
-    margin-right: 5vw;
+    margin-right: 1vw;
     margin-bottom: 1vh;
-    border-radius: 10%;
+    border-radius: 5px;
     background-color: #edfefe;
     color: #63c5ea;
     transition-duration: 0.5s;
@@ -148,18 +222,77 @@ footer {
     text-align: center;
     font-weight: 700;
 }
-
+/*
 footer select {
-    margin: 1vh 0 0 0;
-    height: 5vh;
+    margin: 0 0 0 0;
 }
-
+*/
 footer label {
-    margin-top: 1em;
+    margin: 1em 0;
 }
 
 footer .flex-container-row{
-    align-items: center;
+    align-items:flex-end;
     justify-content: flex-end;
-    flex-basis: 70%;
+    flex-basis: 82%;
+    margin: 0 4vh 2vw 0;
+}
+
+@media (max-height: 720px) and (min-height: 600px){
+
+    .login-container {
+        height:260px;
+    }
+
+    .input-form {
+        height: 50px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    footer .flex-container-column {
+        margin: 0 16px;
+    }
+
+    footer select {
+        margin: 10px 0 0 0;
+        height: 25px;
+    }
+
+
+}
+
+@media (min-width:800px) and (max-width:1267px) {
+
+    .login-container {
+        width: 570px;
+        margin: 0;
+    }
+
+    input, select {
+        width: 166px;
+    }
+
+    footer .flex-container-column {
+        width: 200px;
+    }
+
+    
+}
+
+
+@media (max-width: 799px){
+
+    .blur-bg, main, footer{
+        visibility: hidden;
+    }
+}
+
+@media (max-height: 599px){
+
+    .blur-bg, main, footer{
+        visibility: hidden;
+    }
 }

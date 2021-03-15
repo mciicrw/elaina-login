@@ -61,17 +61,17 @@ also uncomment line below in `index.html` if you want to test user select and se
 - you're good to go!
 
 ## Screenshot
-soon
+![login screenshot](https://github.com/mciicrw/img-resources/Screenshot/LightDM/elaina-login.png)
 
 ## TODO
-- [ ] add screenshot preview
+- [x] add screenshot preview
 - [x] fix login-card size in smaller screen
 - [x] fix footer size & placement
-- [ ] customize select menu
+- [x] customize select menu
 - [ ] add background image in login-card so doesn't look plain & boring
 - [ ] fix color scheme
-- [x] blur background if applicable
-- [ ] fix select & login button font (webkit problem, gecko and blink render this beautifully)
+- [x] ~~blur background if applicable~~ remove blur, it's super slow
+- [x] fix select & login button font (webkit problem, gecko and blink render this beautifully)
 - [ ] edit README.md further so new linux user can understand easily
 
 Future Plan: Make easily customizable lightdm webkit theme based on this theme
