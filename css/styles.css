@@ -32,10 +32,10 @@ img {
 
 .blur-bg {
     background-image: url("../images/elaina-darken.png");
-    
-    /* filter:blur(2px);
-    -webkit-filter: blur(2px); */
-    
+    /*
+    filter:blur(8px);
+    -webkit-filter: blur(8px);
+    */
     background-size: cover;
     color: #373e4d;
     height: 100%;
@@ -59,21 +59,34 @@ img {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.28);
     border-radius: 5px;
-    padding: 10px;
+    padding: 0 10px 0 0;
     margin-top: 1vh;
     margin-bottom: 1vh;
     background-color: #edfefe;
+    border: 2px solid #63c5ea;
+    
 }
 
 .login-container {
-    margin: 0 25vw;
+   
     height: 35vh;
-    width: 45vw;
+    width: 40vw;
 }
 
 .input-form {
     height: 7vh;
 }
+
+.button-area {
+    justify-content: flex-start;
+    align-items: center;
+}
+/*
+#logoImg {
+    background-image: url("../images/elaina-idk.png");
+    background-size: cover;
+    border-radius: 5px 0 0 5px;
+} */
 
 #logoImg img {
     height: 250px;
@@ -81,11 +94,17 @@ img {
 
 #welcome {
     text-align: center;
+    margin-top: 1em;
     margin-bottom: 1em;
+    font-size:1.3rem;
+    font-weight: bold;
 }
 
 #status-text {
     height: 1vh;
+    flex-basis: 75%;
+    font-size: 1em;
+    margin-right: 1ch;
 }
 
 label {
@@ -140,7 +159,8 @@ select{
     width: 100%;
     min-width: 15ch;
     max-width: 30ch;
-    border-bottom: 1px solid var(--select-border);    
+    border-bottom: 1px solid var(--select-border);   
+    padding-left: 1ch; 
     cursor: pointer;
     display: grid;
     grid-template-areas: "select";
@@ -187,8 +207,7 @@ svg *{
     border: none;
     outline: none;
     padding: 0.5em 1em;
-    margin-top: 1em;
-    margin-right: 1vw;
+    margin-top: 1vh;
     margin-bottom: 1vh;
     border-radius: 5px;
     background-color: #edfefe;

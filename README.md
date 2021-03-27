@@ -12,8 +12,12 @@ Any feature request PR or Issues will be closed immediately.
 1. Install the dependecies if you haven't installed
 2. Make sure lightdm using webkit greeter ([activate webkit greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter))
 3. Clone this repository `git clone https://github.com/mciicrw/elaina-login.git`
-4. Copy cloned folder into `/usr/share/lightdm-webkit/themes`
-5. Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` file like shown below
+4. open `index.html` then comment out or delete this line
+```html
+<script src="js/lightdm-sample.js"></script>
+```
+5. Copy cloned folder into `/usr/share/lightdm-webkit/themes`
+6. Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` file like shown below
 ```conf
 .....
 [greeter]
@@ -36,6 +40,7 @@ File Structure
  |- js
    |- lightdm-sample.js -> js file contains dummy lightdm data for testing in browser
    |- loginHandler.js -> main js file for handling lightdm API
+   |- theme.js -> main js file for theme DOM
  |- images -> contain image file for theme
 ```
 

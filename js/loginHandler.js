@@ -68,7 +68,7 @@ document.getElementById("welcome").innerHTML = `Welcome Back, ${usrSelect.value}
     // check if user is authenticated
      if(lightdm.is_authenticated) {
          // if true, then start session selected by user
-         document.documentElement.addEventListener('transitionend', lightdm.start_session(sess[sesSelect.index]));
+         document.documentElement.addEventListener('transitionend', lightdm.start_session(sess[sesSelect.selectedIndex].key));
      } else {
          // if false then return error mesage
          show_message("Authentication Failed", "error");
@@ -138,6 +138,15 @@ usrSelect.onclick = () => {
     // rerun authentication process and change welcome text
     // to match selected username
     document.getElementById("welcome").innerHTML = `Welcome Back, ${usrSelect.value}!`;
+    lightdm.cancel_authentication();
+    start_authentication();
+}
+
+sesSelect.onclick = () => {
+    // rerun authenticaton process
+    // idk just trying if this can resolve
+    // multi session user
+    lightdm.cancel_authentication();
     start_authentication();
 }
 
@@ -175,6 +184,11 @@ const logBut = document.getElementById("loginButton");
 logBut.onclick = () => {
     // start password input handling process
     handle_input();
+}
+
+const logo = document.getElementById("logoImg");
+logo.onclick = () => {
+    console.log(sess[sesSelect.selectedIndex])
 }
 
 
